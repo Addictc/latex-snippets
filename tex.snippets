@@ -1,4 +1,4 @@
-global !p
+	global !p
 def math():
 	return vim.eval('vimtex#syntax#in_mathzone()') == '1'
 
@@ -69,6 +69,7 @@ urlcolor=cyan,
 \pdfsuppresswarningpagegroup=1
 
 \begin{document}
+\maketitle
 	$0
 \end{document}
 endsnippet
@@ -385,6 +386,29 @@ context "math()"
 snippet ynn "yn" iA
 y_{n}
 endsnippet
+
+
+context "math()"
+snippet dx "dx" iA
+\mathrm{d}x
+endsnippet
+
+context "math()"
+snippet dy "dy" iA
+\mathrm{d}y
+endsnippet
+
+context "math()"
+snippet dz "dz" iA
+\mathrm{d}z
+endsnippet
+
+context "math()"
+snippet dt "dt" iA
+\mathrm{d}t
+endsnippet
+
+
 
 
 context "math()"

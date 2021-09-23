@@ -219,11 +219,6 @@ snip.rv = eval('latex(' + match.group(1).replace('\\', '').replace('^', '**').re
 `
 endsnippet
 
-priority 1000
-snippet math "mathematicablock" w
-math $1 math$0
-endsnippet
-
 priority 10000
 snippet 'math(.*)math' "math" wr
 `!p
@@ -378,17 +373,6 @@ snippet AA "forall" iA
 endsnippet
 
 context "math()"
-snippet xnn "xn" iA
-x_{n}
-endsnippet
-
-context "math()"
-snippet ynn "yn" iA
-y_{n}
-endsnippet
-
-
-context "math()"
 snippet dx "dx" iA
 \mathrm{d}x
 endsnippet
@@ -401,48 +385,6 @@ endsnippet
 context "math()"
 snippet dz "dz" iA
 \mathrm{d}z
-endsnippet
-
-context "math()"
-snippet dt "dt" iA
-\mathrm{d}t
-endsnippet
-
-
-
-
-context "math()"
-snippet xii "xi" iA
-x_{i}
-endsnippet
-
-context "math()"
-snippet yii "yi" iA
-y_{i}
-endsnippet
-
-context "math()"
-snippet xjj "xj" iA
-x_{j}
-endsnippet
-
-context "math()"
-snippet yjj "yj" iA
-y_{j}
-endsnippet
-
-context "math()"
-snippet xp1 "x" iA
-x_{n+1}
-endsnippet
-
-context "math()"
-snippet xmm "x" iA
-x_{m}
-endsnippet
-
-snippet R0+ "R0+" iA
-\\R_0^+
 endsnippet
 
 snippet plot "Plot" w
@@ -472,18 +414,19 @@ snippet mcal "mathcal" iA
 \mathcal{$1}$0
 endsnippet
 
-snippet lll "l" iA
-\ell
+context "math()"
+snippet beta "beta" iA
+\beta 
 endsnippet
 
 context "math()"
-snippet nabl "nabla" iA
+snippet nabla "nabla" iA
 \nabla 
 endsnippet
 
 context "math()"
 snippet xx "cross" iA
-\times 
+\times 10^{$1}$0
 endsnippet
 
 priority 100
@@ -537,24 +480,6 @@ snippet invs "inverse" iA
 ^{-1}
 endsnippet
 
-context "math()"
-snippet compl "complement" iA
-^{c}
-endsnippet
-
-context "math()"
-snippet \\\ "setminus" iA
-\setminus
-endsnippet
-
-snippet >> ">>" iA
-\gg
-endsnippet
-
-snippet << "<<" iA
-\ll
-endsnippet
-
 
 snippet ~~ "~" iA
 \sim 
@@ -584,28 +509,12 @@ snippet inn "in " iA
 \in 
 endsnippet
 
-snippet NN "n" iA
-\N
-endsnippet
-
-snippet Nn "cap" iA
-\cap 
-endsnippet
-
-snippet UU "cup" iA
-\cup 
-endsnippet
-
 snippet uuu "bigcup" iA
 \bigcup_{${1:i \in ${2: I}}} $0
 endsnippet
 
 snippet nnn "bigcap" iA
 \bigcap_{${1:i \in ${2: I}}} $0
-endsnippet
-
-snippet OO "emptyset" iA
-\O
 endsnippet
 
 snippet RR "real" iA
@@ -620,23 +529,8 @@ snippet ZZ "Z" iA
 \Z
 endsnippet
 
-snippet <! "normal" iA
-\triangleleft 
-endsnippet
-
 snippet <> "hokje" iA
 \diamond 
-endsnippet
-
-
-context "math()"
-snippet '(?<!i)sts' "text subscript" irA
-_\text{$1} $0
-endsnippet
-
-context "math()"
-snippet tt "text" iA
-\text{$1}$0
 endsnippet
 
 context "math()"
@@ -684,11 +578,6 @@ context "math()"
 snippet "([a-zA-Z])hat" "hat" riA
 \hat{`!p snip.rv=match.group(1)`}
 endsnippet
-
-snippet letw "let omega" iA
-Let $\Omega \subset \C$ be open.
-endsnippet
-
 
 snippet HH "H" iA
 \mathbb{H}
